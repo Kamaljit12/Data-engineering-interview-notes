@@ -1,5 +1,5 @@
 # kafka important topics
-<img src = ![image](https://github.com/Kamaljit12/Data-engineering-interview-notes/assets/89628021/766df17b-361a-49fa-868f-9028fe478200)>
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka.jpg>
 
 # What is Kafka?
 Apache Kafka is a fast, scalable, fault-tolerant messaging system which enables communication between producers
@@ -23,15 +23,15 @@ Contrary to Point to point messaging system, consumers can take more than one to
 message in that topic. Message <b>producers</b> are known as <b>publishers</b> and Kafka consumers are known as 
 <b>subscribers</b>.
 
-####################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_1.jpg>
 
 # Before and After Kafka
 
-#####################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_2.jpg>
 
 # Architecture of Kafka
 
-#############################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_3.jpg>
 
 # Components of Kafka
 ## Kafka Cluster
@@ -93,7 +93,7 @@ available to consumers to read until.
 
 # Topics in Kafka
 
-#################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_4.jpg>
 
 # Partitions in Kafka
 In Apache Kafka, a partition is a division of a Kafka topic. Partitions play a crucial role in Kafka's functionality and 
@@ -121,7 +121,7 @@ Consumers use this offset to keep track of their position in the partition.
 
 # Partitions in Kafka
 
-#############################################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_5.jpg>
 
 
 
