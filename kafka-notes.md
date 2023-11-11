@@ -141,7 +141,7 @@ partitioner. This allows more control over the partitioning process.
   
 - #### Topic 1 and Partition 0 both have a replication factor of 2, and so on and so forth. Broker1 has Topic 1 and Partition 0, and Broker2 has Broker2. It has got a replication factor of 2; which means it will have one additional copy other than the primary copy. The image is below:
 
-##########################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_7.jpg>
 
 # Some important points are stated:
 - The level of replication performed is partition level only.
@@ -157,7 +157,7 @@ distribute the topic partitions as evenly as feasible amongst themselves by ensu
 just one consumer from the group.
 
 
-###############################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_8.jpg>
 
 # How Consumers in Consumer Group read messages?
 - A single Kafka consumer can read from all partitions of a topic. This is often the case when you have only one 
@@ -256,9 +256,15 @@ behavior.
 - #### When the commit fails with a non-retryable error, the commitAsync method doesn't retry the commit, and your application doesn't get a direct notification about it, because it runs in the background. However, you can provide a callback function that gets triggered upon a commit failure or success, which can log the error and you can take appropriate actions based on it.
   
 ##### In Python, the commit() function allows passing a callback function, where you can handle errors.
-## here is an example:
+## Here is an example:
 
-#########################################
+    def commit_collback(err, offsets):
+      if err is not None:
+        print(f"Commit failed: {str(err)}")
+      else:
+        print(f"Commit succeeded with offsets: {offsets}")
+    # In your consumer loop
+    consumer.commit(asynchronous = True, callback = commit_callback)
 
 # What if AsyncCommit failure is non-retryable?
 But keep in mind, even if you handle the error in the callback, the commit has failed and it's not retried, which means the 
@@ -315,7 +321,7 @@ data as it arrives.
 producers and consumers, decoupling system dependencies.
 #### Use cases include real-time analytics, transaction processing, log aggregation, and stream processing for recommendations or IoT sensor data. Kafka's strength lies in its ability to handle real-time data in a scalable, fault-tolerant manner. How does Apache Kafka integrate into data engineering and data pipeline processes ?
 
-###########################################
+<img src = https://github.com/Kamaljit12/Data-engineering-interview-notes/blob/main/jpg/kafka_6.jpg>
 
 
 
